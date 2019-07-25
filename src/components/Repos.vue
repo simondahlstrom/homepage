@@ -1,15 +1,15 @@
 <template>
-  <b-row> 
-  	<b-col sm v-for="(item, index) in allRepos" :key="item.id">
-      <b-card id="card"
-        :header="item.name"
-        header-tag="header"
-        :footer="item.language"
-        footer-tag="footer"       
-      >
-				<b-card-text>{{ item.description }}</b-card-text>
-				<b-button :href="item.html_url" target="_blank" variant="primary">Go to Project</b-button>
-      </b-card>
+  <b-row>
+  	<b-col id="repoCard" class="col-md-4" v-for="(item, index) in allRepos" :key="item.id">
+        <b-card id="card"
+          :header="item.name"
+          header-tag="header"
+          :footer="item.language"
+          footer-tag="footer"
+        >      
+          <b-card-text>{{ item.description }}</b-card-text>
+          <b-button :href="item.html_url" target="_blank" variant="primary">Go to Project</b-button>
+        </b-card>     
     </b-col>
   </b-row>
 </template>
@@ -18,7 +18,7 @@
 export default {
 	data() {
     return {
-      allRepos: []
+      allRepos: [],
     }
   },
 	created() {
@@ -30,7 +30,7 @@ export default {
       })
       .then((data) => {
         this.$data.allRepos = data;
-      })    
+      })
   },
 }
 </script>
@@ -45,5 +45,8 @@ export default {
     font-weight: bold;
   }
   .card-text{
+  }
+  .col-md-4{
+    margin-bottom: 20px;
   }
 </style>

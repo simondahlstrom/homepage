@@ -4,6 +4,7 @@
         <img src="https://avatars1.githubusercontent.com/u/6850768?s=460&v=4" class="d-inline-block align-top" style="width:30px;height:30px" alt="Simon">
         Simon Dahlström <small class="text-muted">developer</small>
         <span id="socialmedia">
+          <a href="#" target="_blank"><img id="email" src="../assets/email.png" alt="simon.dahlstrom@hotmail.com" /></a>
           <a href="https://www.github.com/simondahlstrom" target="_blank"><img src="../assets/GitHub-Mark-32px.png"/></a>
           <a href="https://www.twitter.com/SimonDahlstromD" target="_blank"><img id="twitter" src="../assets/Twitter-Mark.png" /></a>
         </span>        
@@ -19,7 +20,7 @@
 
 <style>
     .navbar{
-  background-color: rgba(250, 250, 250,.9);
+  background-color: rgba(250, 250, 250, 1);
   margin-bottom: 30px;
 }
 #nav{
@@ -43,5 +44,9 @@
 #twitter{
   height: 32px;
   width: 32px;
+}
+#email{  
+  height: 40px;
+  width: 40px;
 }
 </style>
